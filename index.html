@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brechó da Gisa | SPBR Engineering @2026</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1170/1170678.png">
+
+    <!-- Fontes Premium: Montserrat (Quadrada) e Playfair Display (Logo) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS Engine -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                },
+            },
+        }
+    </script>
+
+    <style>
+        /* Configurações Globais de Interface SPBR */
+        body { 
+            margin: 0; 
+            background-color: #ffffff; 
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 20px; }
+        
+        /* Garantia de renderização do motor React */
+        #root { min-height: 100vh; }
+    </style>
+</head>
+<body class="custom-scrollbar">
+    <!-- Ponto de montagem do React -->
+    <div id="root"></div>
+
+    <!-- CHAMADA CRÍTICA: Vincula o HTML ao arquivo main.jsx dentro da pasta src -->
+    <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>
